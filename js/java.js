@@ -1,12 +1,23 @@
 let button = document.querySelector(".line"),
   links = document.querySelector(".nav_links");
 let menu = document.getElementById("menu");
+let xicon=document.getElementById('xicon');
+let read=document.querySelector('.read');
+let readmore=document.querySelector('.readmore')
+// menu button
 menu.addEventListener("click", () => {
   links.classList.toggle("disp");
   menu.classList.toggle("bx-x");
 });
+//   Read more button
 let icon = document.getElementById("theme-icon");
-
+read.addEventListener('click',()=>{
+  readmore.classList.add("readdisp");
+})
+xicon.addEventListener('click',()=>{
+  readmore.classList.remove("readdisp");
+})
+// dark & light theme
 icon.addEventListener("click", () => {
   document.body.classList.toggle("light");
 
@@ -17,6 +28,7 @@ icon.addEventListener("click", () => {
 window.onscroll = () => {
   links.classList.remove("disp");
   menu.classList.remove("bx-x");
+  readmore.classList.remove("readdisp");
 };
 /*=============scroll========== */
 ScrollReveal({
@@ -41,3 +53,30 @@ const type = new Typed(".multi-text", {
   backDelay: 1000,
   loop: true,
 });
+window.addEventListener('scroll',reveal);
+
+function reveal(){
+  var backtop=document.getElementById("backtopdiv");
+ 
+ var reveals=document.querySelectorAll('.reveal');
+ 
+ if(window.pageYOffset>100){
+  backtop.classList.add("topactive")
+
+ }
+ else{
+  backtop.classList.remove("topactive")
+ }
+ for(var i=0;i<reveals.length;i++){
+   var windowheight=window.innerHeight;
+   var revealtop=reveals[i].getBoundingClientRect().top;
+   var revealpoint=100;
+   if(revealtop < windowheight - revealpoint){
+     reveals[i].classList.add('dis');
+   }
+   else{
+     reveals[i].classList.remove('dis');
+   };
+
+ }
+}
