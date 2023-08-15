@@ -466,8 +466,10 @@ span {
 }
 /*******PROJECT********/
 .project {
-  padding: 1rem 10rem;
+  width: 90%;
+  margin: auto;
   height: 100vh;
+  
 }
 .project h1 {
   text-align: center;
@@ -677,12 +679,36 @@ span {
   box-shadow: 0 0 15px var(--bacic-color);
 }
 /*******MEDIA QUERY********/
-@media (max-width: 1200px) {
-  html {
+@media  (max-width: 991px) {
+  html{
     font-size: 55%;
   }
+  .card {
+    padding: 1rem 4rem 1rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+    gap: 1;
+    text-align: center;
+    height: auto;
+  }
+  .project{
+    height: auto;
+    width: 95%;
+    margin: auto;
+  }
+  .project-cont {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    
+   
+  }
+  
 }
-@media only screen and (max-width: 574px) {
+@media  (max-width: 574px) {
+  html{
+    font-size: 55%;
+  }
   .card {
     padding: 1rem 4rem 1rem;
   }
@@ -791,6 +817,7 @@ span {
     margin: 0;
     padding: 0;
     font-size: 1.5rem;
+    height: auto;
   }
 
   .skill li {
@@ -837,8 +864,11 @@ span {
     padding: 1rem 3rem;
   }
   .project {
-    height: auto;
-    padding-top: 3rem;
+    
+      height: auto;
+      width: 95%;
+      margin: auto;
+     padding: 20px;
   }
   .project h1 {
     font-size: 4rem;
