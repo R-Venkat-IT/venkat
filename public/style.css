@@ -25,6 +25,7 @@
   border: none;
   scroll-behavior: smooth;
   font-family: var(--font-fam);
+  scroll-padding-top: 12vh;
 }
 body {
   background-color:var(--first-bg-color);
@@ -32,7 +33,7 @@ body {
 }
 .card {
  height: auto;
- padding: 5rem 9% 2rem;
+ padding: 2rem 9% 2rem;
 
 }
 
@@ -207,7 +208,7 @@ a:hover {
 
 /******************** ABOUT PAGE******************************/
 .about{
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
   background-color: var(--second-bg-color);
   display: flex;
   flex: 1;
@@ -290,14 +291,13 @@ span{
   color: var(--primary-color);
 }
 /***************SKILLS***********************/
-.skill-page{
- padding-top:7rem ;
- 
-}
 
+.skill-page{
+  height: 100vh;
+}
 .sk_list h1{
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   color: var(--bacic-color);
 }
 .skill{
@@ -421,7 +421,7 @@ span{
 /******************** SERVICE PAGE******************************/
 .service{
   background-color: var(--second-bg-color);
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
 }
 .service h1{
   margin-bottom: 4rem;
@@ -485,12 +485,13 @@ span{
 }
 /*******PROJECT********/
 .project{
-  padding: 2rem 10rem;
+  padding: 1rem 10rem;
+  height: 100vh;
 }
 .project h1{
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 4.5rem;
+  /* padding-top: 4.5rem; */
 }
 .project span{
   color: var(--bacic-color);
