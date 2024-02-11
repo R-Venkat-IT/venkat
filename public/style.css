@@ -157,6 +157,7 @@ a:hover {
 }
 .image img {
   width: 36vw;
+  filter: contrast(90%);
 }
 .text-content p {
   font-size: 1.2rem;
@@ -281,7 +282,7 @@ a:hover {
 .profile img {
   width: 100%;
   mix-blend-mode: normal;
-
+  filter:grayscale(100%);
   overflow: hidden;
 }
 .about-text {
